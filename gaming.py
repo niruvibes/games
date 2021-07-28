@@ -386,16 +386,16 @@ while gameinitiate:
     else:
         print('Please answer with the correct input! (spr or hangman)')
         time.sleep(0.1)
-        playerno = input('Do you want to play spr (scissors paper rock) or hangman?: ')
-    if game == 'spr' or game == 'rock': #if spr start rockpaperscissors
-        os.system('cls')
-        rockpaperscissors()
-    elif game == 'hangman': #if hangman start hangman
-        os.system('cls')
-        hangmangamepog()
-    else:
-        os.system('cls')
-        print('dm me on discord how tf did u break it this bad, go to my website and click the discord button, https://niruvibes.github.io/')
+        game = input('Do you want to play spr (scissors paper rock) or hangman?: ')
+if game == 'spr' or game == 'rock': #if spr start rockpaperscissors
+    os.system('cls')
+    rockpaperscissors()
+elif game == 'hangman': #if hangman start hangman
+    os.system('cls')
+    hangmangamepog()
+else:
+    os.system('cls')
+    print('dm me on discord how tf did u break it this bad, go to my website and click the discord button, https://niruvibes.github.io/')
 
     
             
