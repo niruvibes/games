@@ -377,22 +377,41 @@ def rockpaperscissors():
                 else:
                     print("Please choose a valid choice")
 
+def MQZ():
+    def MQZstart():
+        #Acssii art of the word Hangman because its cool
+        print('  __  __  ____   ______')
+        print(' |  \/  |/ __ \ |___  /')
+        print(' | \  / | |  | |   / / ')
+        print(' | |\/| | |  | |  / /  ')
+        print(' | |  | | |__| | / /__ ')
+        print(' |_|  |_|\___\_\/_____|')
+        print('                       ')
+        time.sleep(1)
+        print('Welcome to Manipulation Quiz Machine') #welcome
+        time.sleep(0.1) 
+    MQZstart()
+
 intro()
 gameinitiate = 1
 while gameinitiate:
-    game = input('Do you want to play spr (scissors paper rock) or hangman?: ')
-    if game == 'spr' or game == 'hangman':
+    game = input('Do you want to play spr (scissors paper rock), hangman or MQZ?: ')
+    game = game.lower()
+    if game == 'spr' or game == 'hangman' or game == 'mqz':
         gameinitiate -= 1
     else:
-        print('Please answer with the correct input! (spr or hangman)')
+        print('Please answer with the correct input! (spr, hangman or MQZ)')
         time.sleep(0.1)
-        game = input('Do you want to play spr (scissors paper rock) or hangman?: ')
+        game = input('Do you want to play spr (scissors paper rock), hangman or MQZ?: ')
 if game == 'spr' or game == 'rock': #if spr start rockpaperscissors
     os.system('cls')
     rockpaperscissors()
 elif game == 'hangman': #if hangman start hangman
     os.system('cls')
     hangmangamepog()
+elif game == 'mqz': #if manipulation quiz machine, start it
+    os.system('cls')
+    MQZ()
 else:
     os.system('cls')
     print('dm me on discord how tf did u break it this bad, go to my website and click the discord button, https://niruvibes.github.io/')
